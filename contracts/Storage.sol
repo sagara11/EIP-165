@@ -14,12 +14,15 @@ contract Store is StoreInterface {
         return value;
     }
 
+    function IncreaseValue() external override returns (uint256) {
+        return value += 1;
+    }
+
     function supportsInterface(bytes4 interfaceId)
         external
         pure
-        override
         returns (bool)
     {
-        return interfaceId == 0x01ffc9a7 || interfaceId == 0x75b24222;
+        return interfaceId == 0x01ffc9a7 || interfaceId == 0xc5a23358;
     }
 }

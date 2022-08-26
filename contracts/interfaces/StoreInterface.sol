@@ -2,7 +2,7 @@
 pragma solidity 0.8.4;
 
 contract StoreInterfaceId {
-    bytes4 internal constant STORE_INTERFACE_ID = 0x75b24222;
+    bytes4 internal constant STORE_INTERFACE_ID = 0xc5a23358;
 }
 
 abstract contract StoreInterface is StoreInterfaceId {
@@ -10,9 +10,5 @@ abstract contract StoreInterface is StoreInterfaceId {
 
     function setValue(uint256 v) external virtual;
 
-    function supportsInterface(bytes4 interfaceId)
-        external
-        pure
-        virtual
-        returns (bool);
+    function IncreaseValue() external virtual returns (uint256);
 }

@@ -4,8 +4,12 @@ import "./interfaces/StoreInterface.sol";
 
 contract Selector {
     // 0x75b24222
+    // 0xc5a23358
     function calcStoreInterfaceId() external pure returns (bytes4) {
         StoreInterface i;
-        return i.getValue.selector ^ i.setValue.selector;
+        return
+            i.getValue.selector ^
+            i.setValue.selector ^
+            i.IncreaseValue.selector;
     }
 }
